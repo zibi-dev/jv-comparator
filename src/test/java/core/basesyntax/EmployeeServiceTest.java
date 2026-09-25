@@ -33,7 +33,7 @@ public class EmployeeServiceTest {
 
     @Test
     public void employeeService_sortByAge() {
-        Set<Employee> actualResult = employeeService.getEmployByOrder(employeesOfDifferentAges);
+        Set<Employee> actualResult = employeeService.getEmployeeByOrder(employeesOfDifferentAges);
         Assert.assertEquals("The size of sorted set should the same as the size of input list",
                 employeesOfDifferentAges.size(), actualResult.size());
 
@@ -57,7 +57,7 @@ public class EmployeeServiceTest {
 
     @Test
     public void employeeService_sortByName() {
-        Set<Employee> actualResult = employeeService.getEmployByOrder(employeesOfSameAges);
+        Set<Employee> actualResult = employeeService.getEmployeeByOrder(employeesOfSameAges);
         Assert.assertEquals("The size of sorted set should the same as the size of input list",
                 employeesOfSameAges.size(), actualResult.size());
 
@@ -77,7 +77,7 @@ public class EmployeeServiceTest {
 
     @Test
     public void employeeService_sortByAgeAndName() {
-        Set<Employee> actualResult = employeeService.getEmployByOrder(employeesOfDifferentAgesAndNames);
+        Set<Employee> actualResult = employeeService.getEmployeeByOrder(employeesOfDifferentAgesAndNames);
         Assert.assertEquals("The size of sorted set should the same as the size of input list",
                 employeesOfDifferentAgesAndNames.size(), actualResult.size());
 
@@ -117,7 +117,7 @@ public class EmployeeServiceTest {
 
     @Test
     public void employeeService_emplyList() {
-        Set<Employee> actualResult = employeeService.getEmployByOrder(new ArrayList<>());
+        Set<Employee> actualResult = employeeService.getEmployeeByOrder(new ArrayList<>());
         Assert.assertEquals("The size of sorted set should the same as the size of input list",
                 0, actualResult.size());
     }
